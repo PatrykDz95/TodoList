@@ -2,3 +2,6 @@ Mail Birthday card	Buy birthday card	15-02-2018
 Doctor Appointment	See the doctor	11-01-2018
 Meet Mike	Talk to Mike in Work	25-02-2018
 Pick up Daniel from station	Daniel arrives on March 23 on the 14:00 train	15-01-2018
+new todoitem	Patrykdsadjdaskdnsa	02-02-2018
+test	ewqe	07-02-2018
+PAtryk	Asddas	02-01-2018

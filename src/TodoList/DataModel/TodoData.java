@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,6 +30,10 @@ public class TodoData {
 
     public List<TodoItem> getTodoItems() {
         return todoItems;
+    }
+
+    public void addTodoItem(TodoItem item){
+        todoItems.add(item);
     }
 
     public void loadTodoItems() throws IOException{
@@ -77,4 +80,5 @@ public class TodoData {
             }
         }
     }
+
 }
