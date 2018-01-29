@@ -35,22 +35,23 @@ public void initialize(){
             if(newValue!=null){
                 TodoItem item = todoListView.getSelectionModel().getSelectedItem();
                 itemDetailsTextArea.setText(item.getDetails());
-                DateTimeFormatter df = DateTimeFormatter.ofPattern("d MMM yyyy");
+                DateTimeFormatter df = DateTimeFormatter.ofPattern("d MM yyyy");
                 DeadlineLabel.setText(df.format(item.getDeadline()));
             }
         }
     });
 
-    todoListView.getItems().setAll(TodoData.getInstance().getTodoItems());//calling singleton
+    todoListView.setItems(TodoData.getInstance().getTodoItems());//calling singleton with all items
     todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE); // single allows us to choose only one element
     todoListView.getSelectionModel().selectFirst();
+
 }
 @FXML
 public void showNewItemDialog(){
     Dialog<ButtonType> dialog = new Dialog<>();
     dialog.initOwner(mainBorderPane.getScene().getWindow());
     dialog.setTitle("Add New Todo Item");
-    dialog.setHeaderText("Creat new Todo List!");
+    dialog.setHeaderText("Create new Todo List!");
     FXMLLoader fxmlLoader = new FXMLLoader();
     fxmlLoader.setLocation(getClass().getResource("DataModel/TodoItemDialog.fxml"));
     try{
@@ -63,15 +64,13 @@ public void showNewItemDialog(){
 
     dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
     dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+
     Optional<ButtonType> result = dialog.showAndWait();
     if(result.isPresent() && result.get() == ButtonType.OK){
         DialogController controller = fxmlLoader.getController();
         TodoItem newItem = controller.processResults();
-        todoListView.getItems().setAll(TodoData.getInstance().getTodoItems()); //replaces all content, so that it updates the left bar after we add smthing
         todoListView.getSelectionModel().select(newItem);
-        System.out.println("Ok, pressed");
-    }else {
-        System.out.println("Cancel pressed");
+
     }
 
 

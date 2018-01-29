@@ -2,9 +2,11 @@ package TodoList;
 
 import TodoList.DataModel.TodoData;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +19,7 @@ public class Main extends Application {
         primaryStage.setTitle("Todo List");
         primaryStage.setScene(new Scene(root, 900, 500));
         primaryStage.show();
+
     }
 
 
