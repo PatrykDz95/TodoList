@@ -12,9 +12,9 @@
 <content>
     <GridPane vgap="10" hgap="10">
         <Label text="Short description: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-        <TextField fx:id="shortDescriptionField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <TextField fx:id="shortDescriptionField" GridPane.rowIndex="0" GridPane.columnIndex="1" border="false"/>
         <Label text="Details: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <TextArea fx:id="detailsArea" GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true"/>
+        <TextArea fx:id="detailsArea" GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true" border="false"/>
         <Label text="DeadLine: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
         <DatePicker fx:id="deadLinePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
     </GridPane>
