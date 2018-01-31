@@ -5,6 +5,7 @@ import TodoList.DataModel.TodoData;
 import TodoList.DataModel.TodoItem;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -58,7 +59,13 @@ public class Controller {
                     DeadlineLabel.setText(df.format(item.getDeadline()));
                 }
             }
-        });
+        });  SortedList<TodoItem> sortedList = new SortedList<>(TodoData.getInstance().getTodoItems(),
+//                new Comparator<TodoItem>(){
+//                    @Override
+//
+//                })
+
+//
 
         todoListView.setItems(TodoData.getInstance().getTodoItems());//calling singleton with all items
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE); // single allows us to choose only one element
