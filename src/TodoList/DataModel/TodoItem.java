@@ -9,7 +9,7 @@ public class TodoItem {
     private LocalDate deadline;
 
     public TodoItem(String description, String details, LocalDate deadline) {
-        Description = description;
+        this.Description = description;
         this.details = details;
         this.deadline = deadline;
     }
