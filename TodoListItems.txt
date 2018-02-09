@@ -1,7 +1,5 @@
 Mail Birthday card	Buy birthday card	15-02-2018
 Meet Mike	Talk to Mike in Work	25-02-2018
-dasd	asdasd	03-01-2018
-dasd	vfxcvx	30-01-2018
-vxcv	xcvxcv	06-02-2018
-2132143	fdggfdasfssfsdf	02-02-2018
-dasd	fdvxv	01-02-2018
+Visit the doctor!	Tommorow go to the doctor	10-02-2018
+Job interview	Remeber to go to the interview!	22-02-2018
+Learn to code	Make some screenshots for your repositories and add some funny comments!	09-02-2018

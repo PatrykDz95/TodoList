@@ -115,6 +115,7 @@ public class Controller {
                             setText(null);
                         }else{
                             setText(item.getDescription());
+                            setTextFill(Color.BLACK);
                             //If Today's date matches the date of the item date or is due then the short description will be red
                             if(item.getDeadline().isBefore(LocalDate.now().plusDays(1))){
                                 setTextFill(Color.RED);
